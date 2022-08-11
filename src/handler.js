@@ -17,7 +17,7 @@ if (!name) {
     const response = h
     .response({
         status: 'fail',
-        message: 'Gagal menambahkan data buku. Mohon isi dahulu nama buku',
+        message: 'Gagal menambahkan buku. Mohon isi nama buku',
     })
     .code(400);
     return response;
@@ -28,7 +28,7 @@ if (readPage > pageCount) {
     .response({
         status: 'fail',
         message:
-        'Gagal menambahkan data buku. readPage tidak dibolehkan lebih besar dari pada pageCount',
+        'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount',
     })
     .code(400);
     return response;
@@ -62,7 +62,7 @@ if (isSuccess) {
     const response = h
     .response({
         status: 'success',
-        message: 'Buku sudah berhasil ditambahkan',
+        message: 'Buku berhasil ditambahkan',
         data: {
         bookId: id,
         },
@@ -74,7 +74,7 @@ if (isSuccess) {
 const response = h
     .response({
     status: 'fail',
-    message: 'Buku gagal untuk ditambahkan',
+    message: 'Buku gagal ditambahkan',
     })
     .code(500);
 return response;
@@ -183,7 +183,7 @@ if (book) {
 const response = h
     .response({
     status: 'fail',
-    message: 'Buku tidak ada ditemukan',
+    message: 'Buku tidak ditemukan',
     })
     .code(404);
 return response;
@@ -207,7 +207,7 @@ if (!name) {
     const response = h
     .response({
         status: 'fail',
-        message: 'Gagal memperbarui data buku. Mohon isi dahulu nama buku',
+        message: 'Gagal memperbarui buku. Mohon isi nama buku',
     })
     .code(400);
     return response;
@@ -218,7 +218,7 @@ if (readPage > pageCount) {
     .response({
         status: 'fail',
         message:
-        'Gagal memperbarui data buku. readPage tidak boleh lebih besar pada dari pageCount',
+        'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount',
     })
     .code(400);
     return response;
@@ -247,7 +247,7 @@ if (index !== -1) {
     const response = h
     .response({
         status: 'success',
-        message: 'Buku sudah berhasil diperbarui',
+        message: 'Buku berhasil diperbarui',
     })
     .code(200);
     return response;
@@ -256,7 +256,7 @@ if (index !== -1) {
 const response = h
     .response({
     status: 'fail',
-    message: 'Gagal memperbarui data buku. Id buku tidak ditemukan',
+    message: 'Gagal memperbarui buku. Id tidak ditemukan',
     })
     .code(404);
 return response;
@@ -273,7 +273,7 @@ if (index !== -1) {
     const response = h
     .response({
         status: 'success',
-        message: 'Buku sudah berhasil dihapus',
+        message: 'Buku berhasil dihapus',
     })
     .code(200);
     return response;
@@ -282,7 +282,7 @@ if (index !== -1) {
 const response = h
     .response({
     status: 'fail',
-    message: 'Buku gagal untuk dihapus. Id buku tidak ditemukan',
+    message: 'Buku gagal dihapus. Id tidak ditemukan',
     })
     .code(404);
 return response;
